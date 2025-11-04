@@ -38,17 +38,17 @@ function Header() {
         />
         <img className=" h-5 mr-5" src={Logo} alt="" />
         <div className=" hidden md:flex text-sm  text-white font-bold ">
-          <a className="mr-2 hover:bg-green-950" href="#">
+          <a className="mr-2 h-5 hover:bg-green-950" href="#">
             Home
           </a>
-          <a className="mr-2 hover:bg-green-950" href="#">
+          <a className="mr-2 h-5 hover:bg-green-950" href="#">
             {" "}
             shop
           </a>
-          <a className="mr-2 hover:bg-green-950" href="#">
+          <a className="mr-2 h-5 hover:bg-green-950" href="#">
             About
           </a>
-          <a className="mr-4 hover:bg-green-950" href="#">
+          <a className="mr-4 h-5 hover:bg-green-950" href="#">
             {" "}
             Contact
           </a>
@@ -61,7 +61,7 @@ function Header() {
               src={Close}
               alt=""
             />
-            <nav className="font-bold ">
+            <nav className="font-bold h-5 ">
               <a className="mr-2 hover:bg-green-950 hover:text-white" href="#">
                 Home
               </a>
