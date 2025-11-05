@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Slide1 from "../assets/images/desktop-image-hero-1.jpg"
 import Slide2 from "../assets/images/desktop-image-hero-2.jpg";
 import Slide3 from "../assets/images/desktop-image-hero-3.jpg";
@@ -14,6 +14,21 @@ function Header() {
     const Slides = [ Slide1, Slide2, Slide3 ];
     const [current, setCurrent]=useState(0);
 
+    // useEffect (()= {
+    //   const Interval = setInterval (()=>{
+    //     setCurrent((prev)=> (prev + 1)% Slides.length);
+    //   }, 5000 );
+    //   return () => clearInterval(Interval)
+    // })
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrent((prev) => (prev + 1) % Slides.length);
+        }, 4000); // 5000ms = 5 seconds
+
+        // cleanup when component unmounts
+        return () => clearInterval(interval);
+      }, [Slides.length]);
     const Nextslide = () =>{
         setCurrent((prev) => (prev + 1) % Slides.length);
     }
